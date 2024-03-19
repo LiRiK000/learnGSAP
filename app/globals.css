@@ -78,4 +78,7 @@
   .glow-red {
     @apply absolute h-[300px] w-[300px] bg-red-500 left-[43%] top-[20%] blur-[200px];
   }
+  .glow-green {
+    @apply absolute h-[300px] w-[300px] bg-green-500 left-[43%] top-[20%] blur-[200px];
+  }
 }

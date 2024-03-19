@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
-export const ImageContainer = () => {
+export const VideoContainer = () => {
   const ImageContainerRef = useRef(null);
   useGSAP(() => {
     gsap.fromTo(
@@ -27,8 +27,11 @@ export const ImageContainer = () => {
       ref={ImageContainerRef}
       style={{ opacity: 0 }}
     >
-      <div className="w-screen h-screen flex items-end justify-center">
+      <div className="w-[800px] h-[200px] mx-auto my-[30vh] -z-10">
         <video
+          muted
+          autoPlay
+          loop
           src="/fallback-v2023-black.mp4"
           className="pointer-events-none"
         />

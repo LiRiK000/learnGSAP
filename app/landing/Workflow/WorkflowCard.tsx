@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,8 +15,7 @@ export const WorkflowCard = () => {
     gsap.fromTo(
       TextBlockRef.current,
       {
-        y: 150,
-        duration: 1,
+        y: 125,
       },
       {
         scrollTrigger: {
@@ -25,7 +24,8 @@ export const WorkflowCard = () => {
           end: "bottom center",
           scrub: 1,
         },
-        y: -50,
+        duration: 1,
+        y: -5,
         opacity: 1,
       }
     );
@@ -50,18 +50,18 @@ export const WorkflowCard = () => {
         className="w-screen text-white text-center mx-auto z-10"
         ref={TextBlockRef}
       >
-        <h1 className="text-6xl font-medium">
+        <h1 className="text-8xl font-bold">
           Your Glisten. <br />
           Your workflow.
         </h1>
       </div>
-      <div className="glow-red" />
+      <div className="glow-green" />
       <div
-        className="max-w-7xl h-max mx-auto mt-16 grid items-center gap-8 rounded-xl border
+        className="max-w-7xl w-auto h-max mx-auto mt-16 grid items-center gap-8 rounded-xl border
       border-blue-50/20 bg-gradient-to-b from-slate-50/15
-      to-slate-50/5 px-8 py-8 backdrop-blur-sm lg:grid-cols-2 lg:gap-0 lg:py-12"
+      to-slate-50/5 px-8 py-8 backdrop-blur-sm sm:grid-cols-1 xl:grid-cols-2 lg:gap-0 lg:py-12"
       >
-        <div className="xl:-translate-x-[15%] w-[700px]">
+        <div className="xl:-translate-x-[15%] max-w-[700px]">
           <Image
             src="/65dfb3a79c42d04f7d969973_showcase-image.png"
             alt="code"
@@ -69,11 +69,11 @@ export const WorkflowCard = () => {
             width={1000}
           />
         </div>
-        <div className="text-white lg:-mt-28">
-          <h1 className="text-white text-3xl mb-2">
+        <div className="text-white xl:-mt-28">
+          <h1 className="text-white text-4xl mb-2 font-bold">
             Design the next big thing.
           </h1>
-          <div className="">
+          <div className="font-semibold">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
